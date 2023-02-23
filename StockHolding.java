@@ -75,12 +75,12 @@ public class StockHolding
         return s * price;
     }
     /**
-     * Returns a string representation of this table which would
+     * Returns a string representation of this StockHolding which would
      * print in the format shown in the example below.
      * 
      * symbol                    name        numShares  $       price  $    numShares * price
      * 
-     * @return A string representation of this table as described.
+     * @return A string representation of this StockHolding as described.
      */
      @Override
     public String toString()

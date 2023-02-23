@@ -92,14 +92,17 @@ public class Portfolio
         return re;
     }
     /**
-     * Returns a string representation of this table which would
+     * Returns a string representation of this portfolio which would
      * print in the format shown in the example below.
      * 
-     * Table Number: 5
-     * TotalSeats: 4
-     * Seats in Use: 3
+     * Symbol                     Name    Shares         @Price          Total
+     * -----------------------------------------------------------------------
+     * stocks.get(0).toString()
+     * stocks.get(1).toString()
+     * ...
+     * stocks.get(size(0-1).toString()
      * 
-     * @return A string representation of this table as described.
+     * @return A string representation of this portfolio as described.
      */
     @Override
     public String toString()

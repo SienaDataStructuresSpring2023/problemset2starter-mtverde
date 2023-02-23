@@ -10,17 +10,36 @@ public class Portfolio
     public ArrayList<StockHolding> stocks;
     public double invest;
     public double payout;
+    /**
+     * Constructs an empty portfolio
+     * 
+     */
     public Portfolio(){
         stocks = new ArrayList<StockHolding>();
         invest = 0.0;
         payout = 0.0;
     }
+    /**
+     * Returns the invest.
+     * 
+     * @return The invest.
+     */
     public double getInvest(){
         return invest;
     }
+    /**
+     * Returns the payout
+     * 
+     * @return The payout.
+     */
     public double getPayout(){
         return payout;
     }
+    /**
+     * Returns the value of the portfolio.
+     * 
+     * @return The table value of the portfolio.
+     */
     public double getValue(){
         double val = 0;
         for(StockHolding s : stocks){
@@ -28,6 +47,11 @@ public class Portfolio
         }
         return val;
     }
+    /**
+     * Returns the table number.
+     * 
+     * @return The table number.
+     */
     public int getIndex(String sym){
         int count = 0;
         for(StockHolding s : stocks){
@@ -38,6 +62,11 @@ public class Portfolio
         }
         return -1;
     }
+    /**
+     * Returns the table number.
+     * 
+     * @return The table number.
+     */
     public double buyStock(String s, String n, int ns, double p){
         if(getIndex(s) == -1){
             StockHolding a = new StockHolding(s, n, ns, p);
@@ -48,6 +77,11 @@ public class Portfolio
         invest += ns * p;
         return ns * p;
     }
+    /**
+     * Returns the table number.
+     * 
+     * @return The table number.
+     */
     public double sellStock(String s, int ns){
         int i = getIndex(s);
         payout += ns * stocks.get(i).getPrice();
@@ -57,6 +91,16 @@ public class Portfolio
         }
         return re;
     }
+    /**
+     * Returns a string representation of this table which would
+     * print in the format shown in the example below.
+     * 
+     * Table Number: 5
+     * TotalSeats: 4
+     * Seats in Use: 3
+     * 
+     * @return A string representation of this table as described.
+     */
     @Override
     public String toString()
     {

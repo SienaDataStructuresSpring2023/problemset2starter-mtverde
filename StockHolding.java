@@ -13,6 +13,11 @@ public class StockHolding
     /**
      * Constructs a StockHolding object with the given parameters
      * 
+     * @param s The symbol of the stock
+     * @param n The name of the stock
+     * @param sn The number of shares of the stock
+     * @param p The price of the stock
+     * 
      * @return The table number.
      */
     public StockHolding(String s, String n, int ns, double p){

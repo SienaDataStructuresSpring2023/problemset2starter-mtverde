@@ -48,9 +48,13 @@ public class Portfolio
         return val;
     }
     /**
-     * Returns the table number.
+     * Returns the index of a StockHolding with a sybol that equals the 
+     * paramater
      * 
-     * @return The table number.
+     * @param sym The symbol that the program is serching for
+     * 
+     * @return The index of a StockHolding with a sybol that equals the 
+     * paramater
      */
     public int getIndex(String sym){
         int count = 0;
@@ -63,9 +67,16 @@ public class Portfolio
         return -1;
     }
     /**
-     * Returns the table number.
+     * Buys a certin type of stock. If the desired stock is not in the 
+     * portfolio creates a new StockHolding object and adds it to the 
+     * portfolio. Returns the newly bought stock * it's price
      * 
-     * @return The table number.
+     * @param s The symbol of the stock
+     * @param n The name of the stock
+     * @param sn The number of shares of the stock
+     * @param p The price of the stock
+     * 
+     * @return The newly bought stock * it's price
      */
     public double buyStock(String s, String n, int ns, double p){
         if(getIndex(s) == -1){
@@ -78,9 +89,14 @@ public class Portfolio
         return ns * p;
     }
     /**
-     * Returns the table number.
+     * Sells a certin type of stock. If the stock has it's shares reduced to 
+     * 0, removes that StockHolding item from stocks. Returns the sold 
+     * stock * it's price
      * 
-     * @return The table number.
+     * @param s The symbol of the stock
+     * @param sn The number of shares of the stock
+     * 
+     * @return The sold stock * it's price
      */
     public double sellStock(String s, int ns){
         int i = getIndex(s);

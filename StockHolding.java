@@ -1,5 +1,6 @@
 /**
- * Write a description of class Asset here.
+ * A series of methods designed to immatate a stock porfolio 
+ * capable of adding viewing and removing stocks
  *
  * @author (Michael Verde)
  * @version (2/22/23)
@@ -18,7 +19,6 @@ public class StockHolding
      * @param sn The number of shares of the stock
      * @param p The price of the stock
      * 
-     * @return The table number.
      */
     public StockHolding(String s, String n, int ns, double p){
         symbol = s;
@@ -26,6 +26,7 @@ public class StockHolding
         numShares = ns;
         price = p;
     }
+
     /**
      * Returns the symbol.
      * 
@@ -34,6 +35,7 @@ public class StockHolding
     public String getSymbol(){
         return symbol;
     }
+
     /**
      * Returns the name.
      * 
@@ -42,6 +44,7 @@ public class StockHolding
     public String getName(){
         return name;
     }
+
     /**
      * Returns the number of shares.
      * 
@@ -50,6 +53,7 @@ public class StockHolding
     public int getNumShares(){
         return numShares;
     }
+
     /**
      * Returns the price.
      * 
@@ -58,6 +62,7 @@ public class StockHolding
     public double getPrice(){
         return price;
     }
+
     /**
      * Adds s shares and sets the price to p
      * 
@@ -68,6 +73,7 @@ public class StockHolding
         numShares += s;
         price = p;
     }
+
     /**
      * Removes s shares and returns s * price.
      * 
@@ -79,6 +85,7 @@ public class StockHolding
         numShares -= s;
         return s * price;
     }
+
     /**
      * Returns a string representation of this StockHolding which would
      * print in the format shown in the example below.
@@ -87,11 +94,11 @@ public class StockHolding
      * 
      * @return A string representation of this StockHolding as described.
      */
-     @Override
+    @Override
     public String toString()
     {
         //DO NOT EDIT THIS METHOD.
         return String.format("%6s%25s%,10d  $%,12.2f  $%,12.2f%n", 
-        symbol, name, numShares, price, numShares * price); 
+            symbol, name, numShares, price, numShares * price); 
     }
 }
